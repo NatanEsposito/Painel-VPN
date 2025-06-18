@@ -1,0 +1,14 @@
+[
+	{
+		"email": "Admin@gmail.com",
+		"senha": "$2y$10$k21XjVO61dMuUyZVJkhZZu5spbn5kXeWEgSwsfp7bShbep65fHGmy",
+		"nome": "Administrador PadrÃ£o",
+		"ativo": true
+	},
+	{
+		"email": "taldoN@gmail.com",
+		"nome": "natan",
+		"senha": "$2y$10$Bf22.L1VORAKjUreE9iq7O1EAnzXjqCIvPg0hvRL0Duy9CYnt0h82",
+		"ativo": false
+	}
+]

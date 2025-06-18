@@ -1,0 +1,21 @@
+CREATE DATABASE painelvpn;
+
+USE painelvpn;
+
+CREATE TABLE usuarios (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(30) NOT NULL UNIQUE,
+  email VARCHAR(100) NOT NULL UNIQUE,
+  senha_hash VARCHAR(255) NOT NULL,
+  administrador BOOLEAN DEFAULT FALSE,
+  ativo BOOLEAN DEFAULT TRUE,
+  tentativas INT DEFAULT 0
+);
+
+CREATE TABLE certificados (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  usuario_id INT,
+  identificador VARCHAR(7) UNIQUE,
+  data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+);
